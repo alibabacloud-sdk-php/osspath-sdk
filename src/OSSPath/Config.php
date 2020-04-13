@@ -13,16 +13,16 @@ class Config extends Model
      * @var string
      */
     public $domainId;
-    public $protocol;
-    public $type;
-    public $securityToken;
-    public $accessKeyId;
-    public $accessKeySecret;
     public $clientId;
     public $refreshToken;
     public $clientSecret;
     public $accessToken;
     public $expireTime;
+    public $protocol;
+    public $type;
+    public $securityToken;
+    public $accessKeyId;
+    public $accessKeySecret;
     public $nickname;
     public $userAgent;
 
@@ -36,16 +36,16 @@ class Config extends Model
         $res                    = [];
         $res['endpoint']        = $this->endpoint;
         $res['domainId']        = $this->domainId;
-        $res['protocol']        = $this->protocol;
-        $res['type']            = $this->type;
-        $res['securityToken']   = $this->securityToken;
-        $res['accessKeyId']     = $this->accessKeyId;
-        $res['accessKeySecret'] = $this->accessKeySecret;
         $res['clientId']        = $this->clientId;
         $res['refreshToken']    = $this->refreshToken;
         $res['clientSecret']    = $this->clientSecret;
         $res['accessToken']     = $this->accessToken;
         $res['expireTime']      = $this->expireTime;
+        $res['protocol']        = $this->protocol;
+        $res['type']            = $this->type;
+        $res['securityToken']   = $this->securityToken;
+        $res['accessKeyId']     = $this->accessKeyId;
+        $res['accessKeySecret'] = $this->accessKeySecret;
         $res['nickname']        = $this->nickname;
         $res['userAgent']       = $this->userAgent;
 
@@ -66,21 +66,6 @@ class Config extends Model
         if (isset($map['domainId'])) {
             $model->domainId = $map['domainId'];
         }
-        if (isset($map['protocol'])) {
-            $model->protocol = $map['protocol'];
-        }
-        if (isset($map['type'])) {
-            $model->type = $map['type'];
-        }
-        if (isset($map['securityToken'])) {
-            $model->securityToken = $map['securityToken'];
-        }
-        if (isset($map['accessKeyId'])) {
-            $model->accessKeyId = $map['accessKeyId'];
-        }
-        if (isset($map['accessKeySecret'])) {
-            $model->accessKeySecret = $map['accessKeySecret'];
-        }
         if (isset($map['clientId'])) {
             $model->clientId = $map['clientId'];
         }
@@ -95,6 +80,21 @@ class Config extends Model
         }
         if (isset($map['expireTime'])) {
             $model->expireTime = $map['expireTime'];
+        }
+        if (isset($map['protocol'])) {
+            $model->protocol = $map['protocol'];
+        }
+        if (isset($map['type'])) {
+            $model->type = $map['type'];
+        }
+        if (isset($map['securityToken'])) {
+            $model->securityToken = $map['securityToken'];
+        }
+        if (isset($map['accessKeyId'])) {
+            $model->accessKeyId = $map['accessKeyId'];
+        }
+        if (isset($map['accessKeySecret'])) {
+            $model->accessKeySecret = $map['accessKeySecret'];
         }
         if (isset($map['nickname'])) {
             $model->nickname = $map['nickname'];
